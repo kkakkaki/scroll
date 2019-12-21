@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>簡単スクロールエフェクト</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>jQueryスクロールエフェクト・プラグイン</h1>
+        <p>下にスクロール</p>
+
+        <section class="FadeThis">
+            <h2>1. FadeThis</h2>
+            <ul>
+                <li class="slide-left">Slide Left</li>
+                <li class="slide-right">Slide Right</li>
+                <li class="slide-top">Side Top</li>
+                <li class="slide-bottom">Side Bottom</li>
+            </ul>
+        </section>
+
+        <section class="RELLAX">
+            <h2>2. RELLAX</h2>
+            <div class="rellax ball ball-1"></div>
+            <div class="rellax ball ball-2" data-rellax-speed="-3"></div>
+            <div class="rellax ball ball-3" data-rellax-speed="-1"></div>
+
+        </section>
+
+        <section class="scrollr">
+            <h2>3. scrollr</h2>
+            <div class="box-1" data-center-top="transform:translateX(0px);"
+            data-top-top="transform:translateX(500px);"></div>
+
+            <div class="box-2" data-center-top="transform:rotate(0deg);"
+            data-top-top="transform:rotate(360deg);"></div>
+        </section>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- FadeThis -->
+    <script src="js/jquery.fadethis.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(window).fadeThis({
+                speed: 1000,
+            });
+        });
+    </script>
+
+    <!-- RELLAX -->
+    <script src="js/rellax.min.js"></script>
+    <script type="text/javascript">
+        var rellax = new Rellax(' .rellax ');
+    </script>
+
+    <!-- skrollr -->
+    <script src="js/skrollr.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+    </script>
+</body>
+</html>
